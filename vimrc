@@ -31,6 +31,9 @@ set hlsearch
 " Incremental search
 set incsearch
 
+" Remap leader
+:let mapleader = " "
+
 " Cancel search on ESC
 nnoremap <silent> <leader>/ :nohlsearch <cr>
 
@@ -64,15 +67,9 @@ set showtabline=2
 " Command-T
 let g:CommandTWildIgnore=&wildignore . ",*/Godeps"
 
-" NERDTree
-let NERDTreeMapActivateNode='<right>'
-nmap <leader>n :NERDTreeToggle<CR>
-nmap <leader>j :NERDTreeFind<CR>
-let NERDTreeIgnore=['\.DS_Store', '\~$', '\.swp']
-let NERDTreeQuitOnOpen=1
 
 " Git Gutter
-let g:gitgutter_sign_column_always=1
+set signcolumn=yes
 
 " Lightline / bufferline
 let g:lightline = {
@@ -98,7 +95,7 @@ nmap <Leader>0 <Plug>lightline#bufferline#go(10)
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 let g:acp_enableAtStartup = 0
 " Use neocomplete.
-let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_at_startup = 0
 " Use smartcase.
 let g:neocomplete#enable_smart_case = 1
 " Set minimum syntax keyword length.
