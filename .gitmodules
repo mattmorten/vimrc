@@ -1,0 +1,24 @@
+[submodule "/Users/matt/.vim/bundle/lightline"]
+	path = /Users/matt/.vim/bundle/lightline
+	url = https://github.com/itchyny/lightline.vim
+[submodule "/Users/matt/.vim/bundle/command-t"]
+	path = /Users/matt/.vim/bundle/command-t
+	url = https://github.com/wincent/command-t.git
+[submodule "/Users/matt/.vim/bundle/nerdtree"]
+	path = /Users/matt/.vim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "/Users/matt/.vim/bundle/vim-go"]
+	path = /Users/matt/.vim/bundle/vim-go
+	url = https://github.com/fatih/vim-go.git
+[submodule "bundle/vim-gitgutter"]
+	path = bundle/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter
+[submodule "bundle/lightline-bufferline"]
+	path = bundle/lightline-bufferline
+	url = https://github.com/mgee/lightline-bufferline.git
+[submodule "bundle/vim-multiple-cursors"]
+	path = bundle/vim-multiple-cursors
+	url = https://github.com/terryma/vim-multiple-cursors.git
+[submodule "bundle/neocomplete"]
+	path = bundle/neocomplete
+	url = https://github.com/Shougo/neocomplete.vim.git
