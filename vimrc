@@ -38,7 +38,7 @@ set incsearch
 nnoremap <silent> <leader>/ :nohlsearch <cr>
 
 " Map \\ to Open Previous File
-nnoremap <Leader><Leader> :e#<CR>
+nnoremap <Leader>l :e#<CR>
 
 " Show matching parens
 set showmatch
@@ -63,6 +63,17 @@ autocmd FileType make set noexpandtab shiftwidth=8 softtabstop=0
 " Turn on status line
 set laststatus=2
 set showtabline=2
+
+"Netrw
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+let g:netrw_winsize = 35
+"augroup ProjectDrawer
+"  autocmd!
+"  autocmd VimEnter * :Vexplore
+"augroup END
 
 " Command-T
 let g:CommandTWildIgnore=&wildignore . ",*/Godeps"
@@ -91,6 +102,18 @@ nmap <Leader>8 <Plug>lightline#bufferline#go(8)
 nmap <Leader>9 <Plug>lightline#bufferline#go(9)
 nmap <Leader>0 <Plug>lightline#bufferline#go(10)
 
+" Go window setup
+nnoremap <Leader><Leader> :TagbarOpen<CR><C-W>l<C-W>s:e .<CR><C-W>h:let g:netrw_chgwin=winnr()<CR><C-W>h
+
+" Go-specific key remaps
+ au FileType go nmap <Leader>i <Plug>(go-info)
+ au FileType go nmap <Leader>gd <Plug>(go-doc)
+ au FileType go nmap <Leader>r <Plug>(go-run)
+ au FileType go nmap <Leader>b <Plug>(go-build)
+ "au FileType go nmap <Leader>t <Plug>(go-test)
+ au FileType go nmap <Leader>l <Plug>(go-lint)
+ au FileType go nmap gd <Plug>(go-def-tab)
+
 " Go Vim
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 let g:acp_enableAtStartup = 0
@@ -114,3 +137,37 @@ if !exists('g:neocomplete#sources#omni#input_patterns')
       let g:neocomplete#sources#omni#input_patterns = {}
   endif
 let g:neocomplete#sources#omni#input_patterns.go = '[^.[:digit:] *\t]\.\w*'
+
+" Tagbar
+let g:tagbar_width = 55
+let g:tagbar_type_go = {
+	\ 'ctagstype' : 'go',
+	\ 'kinds'     : [
+		\ 'p:package',
+		\ 'i:imports:1',
+		\ 'c:constants',
+		\ 'v:variables',
+		\ 't:types',
+		\ 'n:interfaces',
+		\ 'w:fields',
+		\ 'e:embedded',
+		\ 'm:methods',
+		\ 'r:constructor',
+		\ 'f:functions'
+	\ ],
+	\ 'sro' : '.',
+	\ 'kind2scope' : {
+		\ 't' : 'ctype',
+		\ 'n' : 'ntype'
+	\ },
+	\ 'scope2kind' : {
+		\ 'ctype' : 't',
+		\ 'ntype' : 'n'
+	\ },
+	\ 'ctagsbin'  : 'gotags',
+	\ 'ctagsargs' : '-sort -silent'
+\ }
+
+"Quickfix always to the bottom
+"" put quickfix window always to the bottom
+autocmd FileType qf wincmd J

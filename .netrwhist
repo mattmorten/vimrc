@@ -1,4 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_cnt =8
 let g:netrw_dirhist_1='/Users/matt/.oh-my-zsh'
 let g:netrw_dirhist_2='/Users/matt/.vim/bundle/lightline.vim'
+let g:netrw_dirhist_3='/Users/matt/gocode/src/github.com/flowdotnet/go-agent/ftbridge'
+let g:netrw_dirhist_4='/Users/matt/gocode/src/github.com/flowdotnet/go-agent'
+let g:netrw_dirhist_5='/Users/matt/gocode/src/github.com/flowdotnet/go-agent/ftagent'
+let g:netrw_dirhist_6='/Users/matt/gocode/src/github.com/flowdotnet/go-agent/ftbridge'
+let g:netrw_dirhist_7='/Users/matt/.vim'
+let g:netrw_dirhist_8='/Users/matt/gocode/src/github.com/flowdotnet/go-agent'
