@@ -46,6 +46,9 @@ set showmatch
 " Ignore case when searching
 set ignorecase
 
+" Press enter to clear the search highlighting
+nnoremap <CR> :noh<CR><CR>
+
 " Other stuff
 set undolevels=1000      " use many muchos levels of undo
 set wildignore=*.swp,*.bak,*.pyc,*.class
@@ -78,6 +81,9 @@ let g:netrw_winsize = 35
 " Command-T
 let g:CommandTWildIgnore=&wildignore . ",*/Godeps"
 
+" NERDTree
+nmap <Leader>n :NERDTreeFind<CR>
+let g:NERDTreeWinPos = "right"
 
 " Git Gutter
 set signcolumn=yes
@@ -89,7 +95,7 @@ let g:lightline = {
 let g:lightline.tabline          = {'left': [['buffers']], 'right': [['close']]}
 let g:lightline.component_expand = {'buffers': 'lightline#bufferline#buffers'}
 let g:lightline.component_type   = {'buffers': 'tabsel'}
-let g:lightline#bufferline#show_number  = 1
+let g:lightline#bufferline#show_number  = 2
 
 nmap <Leader>1 <Plug>lightline#bufferline#go(1)
 nmap <Leader>2 <Plug>lightline#bufferline#go(2)
@@ -103,14 +109,18 @@ nmap <Leader>9 <Plug>lightline#bufferline#go(9)
 nmap <Leader>0 <Plug>lightline#bufferline#go(10)
 
 " Go window setup
-nnoremap <Leader><Leader> :TagbarOpen<CR><C-W>l<C-W>s:e .<CR><C-W>h:let g:netrw_chgwin=winnr()<CR><C-W>h
+nnoremap <Leader><Leader> :TagbarOpen<CR>:NERDTreeFind<CR><C-W>w<C-W>w
+
+" Here is the keyboard shortcut so that closing a buffer doesn't screw up the
+" IDE
+map <leader>q :bp<bar>sp<bar>bn<bar>bd<CR>.
 
 " Go-specific key remaps
  au FileType go nmap <Leader>i <Plug>(go-info)
  au FileType go nmap <Leader>gd <Plug>(go-doc)
  au FileType go nmap <Leader>r <Plug>(go-run)
  au FileType go nmap <Leader>b <Plug>(go-build)
- "au FileType go nmap <Leader>t <Plug>(go-test)
+ au FileType go nmap <Leader>gt <Plug>(go-test)
  au FileType go nmap <Leader>l <Plug>(go-lint)
  au FileType go nmap gd <Plug>(go-def-tab)
 
@@ -138,8 +148,13 @@ if !exists('g:neocomplete#sources#omni#input_patterns')
   endif
 let g:neocomplete#sources#omni#input_patterns.go = '[^.[:digit:] *\t]\.\w*'
 
+"Grep
+"nnoremap <Leader>f :vimgrep /<C-R><C-W>/ *<CR>:cw<CR>
+:map <Leader>f :execute "vimgrep /" . expand("<cword>") . "/j **/*.go"<Bar>cw<CR>
+
 " Tagbar
-let g:tagbar_width = 55
+let g:tagbar_left = 1
+let g:tagbar_width = 35
 let g:tagbar_type_go = {
 	\ 'ctagstype' : 'go',
 	\ 'kinds'     : [
