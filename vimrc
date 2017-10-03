@@ -62,6 +62,7 @@ set noswapfile
 
 " Different file types
 autocmd FileType make set noexpandtab shiftwidth=8 softtabstop=0
+autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
 
 " Turn on status line
 set laststatus=2
@@ -111,9 +112,14 @@ nmap <Leader>0 <Plug>lightline#bufferline#go(10)
 " Go window setup
 nnoremap <Leader><Leader> :TagbarOpen<CR>:NERDTreeFind<CR><C-W>w<C-W>w
 
+"Snippets
+let g:UltiSnipsExpandTrigger="<F2>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
 " Here is the keyboard shortcut so that closing a buffer doesn't screw up the
 " IDE
-map <leader>q :bp<bar>sp<bar>bn<bar>bd<CR>.
+map <leader>q :bp<bar>sp<bar>bn<bar>bd<CR>
 
 " Go-specific key remaps
  au FileType go nmap <Leader>i <Plug>(go-info)
