@@ -113,7 +113,7 @@ nmap <Leader>0 <Plug>lightline#bufferline#go(10)
 nnoremap <Leader><Leader> :TagbarOpen<CR>:NERDTreeFind<CR><C-W>w<C-W>w
 
 "Snippets
-let g:UltiSnipsExpandTrigger="<F2>"
+"let g:UltiSnipsExpandTrigger="<TAB>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
@@ -131,28 +131,11 @@ map <leader>q :bp<bar>sp<bar>bn<bar>bd<CR>
  au FileType go nmap gd <Plug>(go-def-tab)
 
 " Go Vim
+let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_auto_select = 0
+let g:neocomplete#disable_auto_complete=1
+inoremap <expr><F1>  neocomplete#start_manual_complete()
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-let g:acp_enableAtStartup = 0
-" Use neocomplete.
-let g:neocomplete#enable_at_startup = 0
-" Use smartcase.
-let g:neocomplete#enable_smart_case = 1
-" Set minimum syntax keyword length.
-let g:neocomplete#sources#syntax#min_keyword_length = 3
-if !exists('g:neocomplete#keyword_patterns')
-        let g:neocomplete#keyword_patterns = {}
-    endif
-    let g:neocomplete#keyword_patterns['default'] = '\h\w*'
-inoremap <expr><Space> pumvisible() ? "\<C-y>" : "\<Space>"
-let g:neocomplete#enable_auto_select = 1
-if !exists('g:neocomplete#force_omni_input_patterns')
-            let g:neocomplete#force_omni_input_patterns = {}
-        endif
-        let g:neocomplete#force_omni_input_patterns.go = '[^.[:digit:] *\t]\.'
-if !exists('g:neocomplete#sources#omni#input_patterns')
-      let g:neocomplete#sources#omni#input_patterns = {}
-  endif
-let g:neocomplete#sources#omni#input_patterns.go = '[^.[:digit:] *\t]\.\w*'
 
 "Grep
 "nnoremap <Leader>f :vimgrep /<C-R><C-W>/ *<CR>:cw<CR>
