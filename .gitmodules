@@ -12,13 +12,13 @@
 	url = git://github.com/fatih/vim-go.git
 [submodule "bundle/vim-gitgutter"]
 	path = bundle/vim-gitgutter
-	url = git://github.com/airblade/vim-gitgutter
+	url = git@github.com:airblade/vim-gitgutter.git
 [submodule "bundle/lightline-bufferline"]
 	path = bundle/lightline-bufferline
-	url = git://github.com/mgee/lightline-bufferline.git
+	url = git@github.com:mgee/lightline-bufferline.git
 [submodule "bundle/vim-multiple-cursors"]
 	path = bundle/vim-multiple-cursors
-	url = git://github.com/terryma/vim-multiple-cursors.git
+	url = git@github.com:terryma/vim-multiple-cursors.git
 [submodule "bundle/neocomplete"]
 	path = bundle/neocomplete
 	url = git://github.com/Shougo/neocomplete.vim.git
@@ -36,7 +36,13 @@
 	url = git://github.com/nsf/gocode
 [submodule "bundle/ack.vim"]
 	path = bundle/ack.vim
-	url = git://github.com/mileszs/ack.vim.git
+	url = git@github.com:mileszs/ack.vim.git
 [submodule "bundle/command-t"]
 	path = bundle/command-t
 	url = git@github.com:wincent/command-t.git
+[submodule "bundle/lightline.vim"]
+	path = bundle/lightline.vim
+	url = git@github.com:itchyny/lightline.vim.git
+[submodule "bundle/nerdtree"]
+	path = bundle/nerdtree
+	url = git@github.com:scrooloose/nerdtree.git
