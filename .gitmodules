@@ -1,27 +1,27 @@
 [submodule "/Users/matt/.vim/bundle/lightline"]
 	path = /Users/matt/.vim/bundle/lightline
-	url = https://github.com/itchyny/lightline.vim
+	url = git://github.com/itchyny/lightline.vim
 [submodule "/Users/matt/.vim/bundle/command-t"]
 	path = /Users/matt/.vim/bundle/command-t
-	url = https://github.com/wincent/command-t.git
+	url = git://github.com/wincent/command-t.git
 [submodule "/Users/matt/.vim/bundle/nerdtree"]
 	path = /Users/matt/.vim/bundle/nerdtree
-	url = https://github.com/scrooloose/nerdtree.git
+	url = git://github.com/scrooloose/nerdtree.git
 [submodule "/Users/matt/.vim/bundle/vim-go"]
 	path = /Users/matt/.vim/bundle/vim-go
-	url = https://github.com/fatih/vim-go.git
+	url = git://github.com/fatih/vim-go.git
 [submodule "bundle/vim-gitgutter"]
 	path = bundle/vim-gitgutter
-	url = https://github.com/airblade/vim-gitgutter
+	url = git://github.com/airblade/vim-gitgutter
 [submodule "bundle/lightline-bufferline"]
 	path = bundle/lightline-bufferline
-	url = https://github.com/mgee/lightline-bufferline.git
+	url = git://github.com/mgee/lightline-bufferline.git
 [submodule "bundle/vim-multiple-cursors"]
 	path = bundle/vim-multiple-cursors
-	url = https://github.com/terryma/vim-multiple-cursors.git
+	url = git://github.com/terryma/vim-multiple-cursors.git
 [submodule "bundle/neocomplete"]
 	path = bundle/neocomplete
-	url = https://github.com/Shougo/neocomplete.vim.git
+	url = git://github.com/Shougo/neocomplete.vim.git
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
 	url = git://github.com/majutsushi/tagbar
@@ -30,10 +30,10 @@
 	url = git://github.com/SirVer/ultisnips.git
 [submodule "bundle/YouCompleteMe"]
 	path = bundle/YouCompleteMe
-	url = https://github.com/Valloric/YouCompleteMe.git
+	url = git://github.com/Valloric/YouCompleteMe.git
 [submodule "bundle/gocode"]
 	path = bundle/gocode
-	url = https://github.com/nsf/gocode
+	url = git://github.com/nsf/gocode
 [submodule "bundle/ack.vim"]
 	path = bundle/ack.vim
-	url = https://github.com/mileszs/ack.vim.git
+	url = git://github.com/mileszs/ack.vim.git
