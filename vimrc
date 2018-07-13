@@ -1,13 +1,17 @@
 " Plugin manager
 execute pathogen#infect()
 
+if !has('gui_running')
+      set t_Co=256
+endif
+
 filetype on
 syntax on
-colorscheme Tomorrow-Night-Bright
+"colorscheme Tomorrow-Night-Bright
 
 set guifont=Menlo\ Regular:h30
 
-set colorcolumn=90
+"set colorcolumn=90
 set number
 
 set hidden
